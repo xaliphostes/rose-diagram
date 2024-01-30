@@ -1,6 +1,6 @@
 {
     "name": "rose-diagram",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "Rose diagram in TypeScript using D3",
     "author": "Frantz Maerten, Romain Plateaux",
     "license": "MIT",

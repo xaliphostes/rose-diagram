@@ -1,27 +1,27 @@
 import * as d3 from 'd3'
 
 export type RoseDiagramParameters = {
-    width: number,
-    height: number,
-    draw: {
-        labels: boolean,
-        circles: boolean,
-        binBorder: boolean,
-        cardinals: boolean
+    width?: number,
+    height?: number,
+    draw?: {
+        labels?: boolean,
+        circles?: boolean,
+        binBorder?: boolean,
+        cardinals?: boolean
     },
-    margin: {
-        top: number,
-        right: number,
-        bottom: number,
-        left: number
+    margin?: {
+        top?: number,
+        right?: number,
+        bottom?: number,
+        left?: number
     },
-    is360: boolean,
-    innerR: number,
-    deltaAngle: number,
-    gradTickSpacing: number,
-    fillColor: string,
-    lineColor: string,
-    colourHover: string,
+    is360?: boolean,
+    innerR?: number,
+    deltaAngle?: number,
+    gradTickSpacing?: number,
+    fillColor?: string,
+    lineColor?: string,
+    colourHover?: string,
 }
 
 export const DefaultRoseDiagramParameters: RoseDiagramParameters = {
@@ -34,10 +34,10 @@ export const DefaultRoseDiagramParameters: RoseDiagramParameters = {
         cardinals: true
     },
     margin: {
-        top: 10,
-        right: 10,
-        bottom: 10,
-        left: 10
+        top: 0,
+        right: 2,
+        bottom: 0,
+        left: 2
     },
     is360: false,
     innerR: 5,
@@ -51,12 +51,25 @@ export const DefaultRoseDiagramParameters: RoseDiagramParameters = {
 export class RoseDiagram {
     private element_: HTMLElement = undefined
     private data_: number[] = []
-    // params: RoseDiagramParameters = undefined
+    params: RoseDiagramParameters = DefaultRoseDiagramParameters
 
-    constructor(element: HTMLElement, data: number[], private params: RoseDiagramParameters = DefaultRoseDiagramParameters) {
+    constructor(element: HTMLElement, data: number[], params: RoseDiagramParameters = DefaultRoseDiagramParameters) {
         this.element_ = element
         this.data_ = data
-        this.params = params
+        Object.assign(this.params, params)
+        if (data && data.length > 0) {
+            this.update()
+        }
+    }
+
+    set width(w: number) {
+        this.params.width = w
+        this.update()
+    }
+
+    set height(w: number) {
+        this.params.height = w
+        this.update()
     }
 
     set data(d: number[]) {

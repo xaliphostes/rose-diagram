@@ -152,8 +152,16 @@
                 .trimEnd()
         }
 
-        const rose = new lib.RoseDiagram('rose', new Array(100).fill(0).map((v) => rand(0, 180)))
-        updateRose()
+        const rose = new lib.RoseDiagram('rose', new Array(100).fill(0).map((v) => rand(0, 180)), {
+            width: 300,
+            height: 300,
+            // margin: {
+            //     top: 0,
+            //     left: 5,
+            //     right: 0,
+            //     bottom: 0
+            // }
+        })
 
         const datas = []
 
