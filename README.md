@@ -4,8 +4,6 @@
 
 Written in [TypeScript](https://www.typescriptlang.org/)
 
----
-
 <p align="center">
     <a href="https://xaliphostes.github.io/rose-diagram/"><h1>Demo</h1></a>
 </p>
