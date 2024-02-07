@@ -5,7 +5,7 @@
 Written in [TypeScript](https://www.typescriptlang.org/)
 
 <p align="center">
-    <a href="https://xaliphostes.github.io/rose-diagram/"><h1>Demo</h1></a>
+    <a href="https://xaliphostes.github.io/rose-diagram/"><b>Demo...</b></a>
 </p>
 
 ## Authors
