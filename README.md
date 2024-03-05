@@ -3,11 +3,9 @@
 <center><image src="media/screenshot.jpg" width="400px"/></center>
 
 Written in [TypeScript](https://www.typescriptlang.org/)
-
-<p align="center">
-    <a href="https://xaliphostes.github.io/rose-diagram/"><b>Demo...</b></a>
-</p>
+<br><br>
+[Online Demo](https://xaliphostes.github.io/rose-diagram)
 
 ## Authors
 - Frantz Maerten (aka [xaliphostes](https://github.com/xaliphostes))
-- Romain Plateaux(aka [roman105](https://github.com/roman105/))
+- Romain Plateaux (aka [roman105](https://github.com/roman105/))
